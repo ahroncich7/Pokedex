@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ahroncich7/Pokedex#readme",
   "dependencies": {
-    "bootstrap": "^5.0.2"
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0"
   }
 }
