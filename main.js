@@ -10,7 +10,7 @@ function crearTablaPokemons(url) {
     fetch(url)
         .then(response => response.json())
         .then(function(pokemon) {
-            let tbody = `<thead class=sticky-top style="background-color: white"><th>Name</th></thead>`;
+            let tbody = "";
             pokemon.results.forEach((element, i) => {
                 tbody += `<tr class=poke><td>${element.name}</td></tr>`
             });
