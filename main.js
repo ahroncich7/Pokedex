@@ -17,8 +17,8 @@ function crearTablaPokemons(url) {
             document.getElementById("tabla-1").innerHTML = "";
             document.getElementById("tabla-1").innerHTML = tbody;
             hacerClickeablePokemon();
-            resetearPokeball();
-            hacerMouseOver();
+            // resetearPokeball();
+            // hacerMouseOver();
         })
 
     .catch(error => console.error("Fallo", error))
@@ -67,7 +67,7 @@ function llamarTipos(url) {
             document.getElementById("tabla-1").innerHTML = "";
             document.getElementById("tabla-1").innerHTML = tbody;
             hacerClickeablePokemon("#tabla-1 .poke");
-            resetearPokeball();
+            // resetearPokeball();
             hacerMouseOver();
         })
 
@@ -92,14 +92,14 @@ function hacerClickeableTipo() {
 
 function mostrarPokemon(e) {
     mostrarTabla()
-    ocultarPokeball()
+    // ocultarPokeball()
     let name = e.querySelectorAll("td")[0].textContent
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then(response => response.json())
         .then(responseJSON => {
 
             let name = document.querySelector("#name");
-            name.textContent = responseJSON.name;
+            name.textContent = responseJSON.name.toUpperCase() ;
 
             let weight = document.querySelector("#weight");
             weight.textContent = responseJSON.weight + " pounds";
@@ -137,7 +137,7 @@ function hacerMouseOver() {
         })
 }
 
-function ocultarPokeball() {
+/*function ocultarPokeball() {
     document.querySelector("#tabla-2").classList.remove("oculto")
     document.querySelector("#columna-pokemon").style.backgroundImage = "url('')";
 }
@@ -148,7 +148,7 @@ function resetearPokeball() {
     document.querySelector("#columna-pokemon").style.backgroundImage = `url(${urlPokeball})`;
 
 }
-
+*/
 function mostrarTabla() {
     document.querySelector("#tabla-2").classList.remove("oculto");
 }

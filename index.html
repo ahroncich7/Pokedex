@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <div class="sticky-top navbar navbar-expand-sm navbar-dark bg-danger h-25 franja-negra">
+    <div class="navbar sticky-top navbar-expand-sm navbar-dark bg-danger h-25 franja-negra">
         <div class="container-fluid w-100">
-            <div class="row w-100">
+            <div class="row w-100 bg-danger">
                 <div class="col-sm-2 col-md-3">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,24 +27,58 @@
                         </ul>
                     </div>
                 </div>
-                <div id="" class="col-sm-10 col-md-9 separador bg-danger  text-center">
+                <div id="" class=" separador text-center">
                     <div class="caja-brand bg-danger text-center">
                         <img id="brand" class="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="">
                     </div>
                 </div>
 
+
             </div>
         </div>
     </div>
     <div class="container-fluid pt-5 franja-negra" id="cuerpo">
-        <div class="row row-cols-md-2 justify-content-center">
+        <div class="row row-cols-md-2 justify-content-center pb-5 px-2 pt-0">
             <div class="col-md-6 text-center">
+                <div id="columna-pokemon" class="text-center align-self-center justify-content-center mb-0">
+                    <div id="tarjeta" class="card">
+                        <img id="sprite" src="..." class="card-img-top m-auto" alt="POKEMON-SPRITE">
+                        <div class="card-body">
+                            <table id="tabla-2" class="table table-responsive oculto">
+                                <td colspan="2"><strong id="name" class="h2"></strong></td>
+                                <tr>
+                                    <td class="tag"><strong>Weight:</strong></td>
+                                    <td id="weight"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tag"><strong>Height:</strong> </td>
+                                    <td id="height"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tag"><strong>Abilities:</strong> </td>
+                                    <td id="abilities"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tag"><strong>Types:</strong> </td>
+                                    <td id="types">
+                                        <p id="type1"></p>
+                                        <p id="type2"></p>
+                                    </td>
+                                </tr>
 
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-center pt-2 scrolling">
-                <span class="sticky-top h2 text-center">NAME</span>
-                <table id="tabla-1" class="table mt-2 table-responsive">
-                </table>
+            <div class="col-md-6 order-first order-md-last text-center pt-2">
+                <div class="scrolling text-center pt-2">
+                    <span class="h2 text-center mt-1">Name</span>
+                    <table id="tabla-1" class="table mt-2 table-responsive">
+                    </table>
+                </div>
+
             </div>
         </div>
 

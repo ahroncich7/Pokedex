@@ -2,6 +2,15 @@
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(231, 231, 255, 1) 0%, rgba(123, 231, 252, 1) 100%);
 }
 
+#cuerpo>div {
+    height: 75vh;
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
 #brand {
     height: 3rem;
     position: relative;
@@ -9,8 +18,8 @@
 }
 
 .separador {
-    height: 50px;
-    padding: 50px;
+    height: 0;
+    padding: 10px;
     position: relative;
     margin-top: -4rem;
     z-index: 0
@@ -25,6 +34,7 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.527);
     border-style: solid;
     border-width: 0.5rem;
+    z-index: 100;
 }
 
 .franja-negra {
@@ -34,16 +44,12 @@
 
 .scrolling {
     overflow-y: scroll;
-    height: 80vh;
+    overflow-x: hidden;
+    height: 75vh;
     background: #EFBF02;
     border-radius: 5rem;
     width: 20rem;
-}
-
-@media only screen and (max-width: 700px) {
-    .scrolling {
-        height: 20vh;
-    }
+    display: inline-block;
 }
 
 .scrolling>span {
@@ -52,6 +58,40 @@
     display: inline-block;
     border-radius: 5rem;
     box-shadow: 0 0 10px rgb(33, 37, 41);
+}
+
+#columna-pokemon {
+    max-height: 75vh;
+}
+
+#sprite {
+    display: block;
+    height: 150px;
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .scrolling {
+        height: 20vh;
+        width: 20rem;
+    }
+    .scrolling::-webkit-scrollbar {
+        display: none;
+    }
+    body {
+        overflow: auto;
+    }
+    .caja-brand {
+        position: relative;
+        align-self: center;
+        margin-top: -40px;
+    }
+    #cuerpo>div {
+        overflow: auto;
+    }
+    .card {
+        width: 20rem !important;
+    }
 }
 
 .scrolling::-webkit-scrollbar {
@@ -69,7 +109,23 @@
     border-radius: 1em;
 }
 
-tr:hover {
+.scrolling tr:hover {
     cursor: pointer;
     transform: scale(1.5, 1.5);
+}
+
+.card {
+    display: inline-block;
+    background: #a3a3a2;
+    border: #212529;
+    border-width: 0.5rem;
+    border-radius: 5em;
+    width: 25rem;
+    border-style: solid;
+}
+
+.scrolling>span {
+    position: sticky;
+    top: 10px;
+}
 }
