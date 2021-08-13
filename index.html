@@ -1,97 +1,30 @@
 <!DOCTYPE html>
-<html id="home">
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Atrapalos YA!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 
 <body>
 
-    <header class="p-3 fixed-top">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a id="ir-home" href="#home"></a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#home" class="nav-link px-2 text-secondary" onclick="crearTablaPokemons(urlPokemons)">Pokemons</a></li>
-                    <li><a href="#tipos" class="nav-link px-2 text-white">Types</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-                </ul>
             </div>
         </div>
-    </header>
+    </div>
+    <div class="container-fluid" id="cuerpo">
+        <div class="row row-cols-md-2">
+            <div class="col-md-6">
 
-    <div id="pokemons" class="container">
-        <div class="row">
-            <div id="columna-tabla" class="col-6">
-                <table id="tabla-1" class="table table-responsive">
-                </table>
             </div>
-            <div id="columna-pokemon" class="col-6">
-                <div>
-                    <img class="oculto" id="sprite" src="">
-                </div>
-                <div class="row justify-content-center">
-                    <table id="tabla-2" class="table table-responsive oculto">
-                        <td colspan="2"><strong id="name"></strong></td>
-                        <tr>
-                            <td class="tag"><strong>Weight:</strong></td>
-                            <td id="weight"></td>
-                        </tr>
-                        <tr>
-                            <td class="tag"><strong>Height:</strong> </td>
-                            <td id="height"></td>
-                        </tr>
-                        <tr>
-                            <td class="tag"><strong>Abilities:</strong> </td>
-                            <td id="abilities"></td>
-                        </tr>
-                        <tr>
-                            <td class="tag"><strong>Types:</strong> </td>
-                            <td id="types">
-                                <p id="type1"></p>
-                                <p id="type2"></p>
-                            </td>
-                        </tr>
 
-                    </table>
-                </div>
             </div>
         </div>
 
     </div>
 
-    <div id="tipos">
-        <table id="tabla-3" class="table table-responsive">
-            <thead class="sticky-top">
-                <br>
-                <tr>
-                    <th>TYPE</th>
-                    <th>Strong Again</th>
-                    <th>Weak Again</th>
-                    <th>Resistant to</th>
-                </tr>
-            </thead>
 
-        </table>
-    </div>
-
-
-    <footer class=" p-3 text-dark fixed-bottom ">
-        <div class="container text-center ">
-            <p><small>Pokémon™ 1995</small></p>
-        </div>
-    </footer>
-
-    <script src='Images/type.js'></script>
     <script src='main.js'></script>
-    <script src='node_modules/bootstrap/dist/js/bootstrap.js'></script>
 </body>
 
 </html>
