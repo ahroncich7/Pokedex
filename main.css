@@ -46,14 +46,14 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 75vh;
-    background: #EFBF02;
+    background: #ffcd04de;
     border-radius: 5rem;
     width: 20rem;
     display: inline-block;
 }
 
 .scrolling>span {
-    background: #EFBF02;
+    background: #ffcd04de;
     width: 75%;
     display: inline-block;
     border-radius: 5rem;
@@ -123,11 +123,11 @@ body {
 
 .card {
     display: inline-block;
-    background: #a3a3a2;
+    background: #a3a3a291;
     border: #212529;
     border-width: 0.5rem;
     border-radius: 5em;
-    width: 25rem;
+    width: 35rem;
     border-style: solid;
 }
 
