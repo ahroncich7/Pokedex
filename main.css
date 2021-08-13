@@ -97,6 +97,7 @@ body {
 .scrolling::-webkit-scrollbar {
     background: rgb(175, 172, 240);
     border-radius: 2em;
+    border: solid 3px transparent;
 }
 
 .scrolling::-webkit-scrollbar-track {
@@ -107,6 +108,12 @@ body {
 .scrolling::-webkit-scrollbar-thumb {
     background: #EFBF02;
     border-radius: 1em;
+    border: solid 3px transparent;
+    box-shadow: inset 0 0 10px 10px rgb(43, 42, 42);
+}
+
+.scrolling::-webkit-scrollbar-track {
+    border: solid 3px transparent;
 }
 
 .scrolling tr:hover {
