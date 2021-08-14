@@ -1,9 +1,10 @@
-#cuerpo {
+#cuerpo,
+#tipos {
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(231, 231, 255, 1) 0%, rgba(123, 231, 252, 1) 100%);
 }
 
 #cuerpo>div {
-    height: 75vh;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -22,7 +23,6 @@ body {
     padding: 10px;
     position: relative;
     margin-top: -4rem;
-    z-index: 0
 }
 
 .caja-brand {
@@ -61,7 +61,7 @@ body {
 }
 
 #columna-pokemon {
-    max-height: 75vh;
+    height: 75vh;
 }
 
 #sprite {
@@ -75,7 +75,7 @@ body {
         height: 20vh;
         width: 20rem;
     }
-    .scrolling::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         display: none;
     }
     body {
@@ -92,27 +92,37 @@ body {
     .card {
         width: 20rem !important;
     }
+    .tipos {
+        padding: -4px !important;
+        margin: 0 !important;
+        border-radius: 5px !important;
+        font-size: 8px;
+    }
+    #tabla-3 {
+        margin: 0;
+        text-align: center;
+    }
 }
 
-.scrolling::-webkit-scrollbar {
+::-webkit-scrollbar {
     background: rgb(175, 172, 240);
     border-radius: 2em;
     border: solid 3px transparent;
 }
 
-.scrolling::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #212529;
     border-radius: 2em;
 }
 
-.scrolling::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #EFBF02;
     border-radius: 1em;
     border: solid 3px transparent;
     box-shadow: inset 0 0 10px 10px rgb(43, 42, 42);
 }
 
-.scrolling::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     border: solid 3px transparent;
 }
 
@@ -129,6 +139,7 @@ body {
     border-radius: 5em;
     width: 35rem;
     border-style: solid;
+    overflow-y: hidden;
 }
 
 .scrolling>span {
@@ -224,4 +235,21 @@ body {
     margin: 4px 2px !important;
     cursor: pointer !important;
     border-radius: 30px !important;
+    box-shadow: 0 0 10px;
+}
+
+#tipos {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 90vh;
+}
+
+#tabla-3 {
+    width: 80vw;
+    margin: 5vw auto;
+}
+
+#tabla-3 thead {
+    position: sticky;
+    top: 7vw;
 }

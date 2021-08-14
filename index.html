@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="home">
 
 <head>
     <meta charset='utf-8'>
@@ -14,16 +14,16 @@
 
 <body>
     <div class="navbar sticky-top navbar-expand-sm navbar-dark bg-danger h-25 franja-negra">
-        <div class="container-fluid w-100">
-            <div class="row w-100 bg-danger">
+        <div class="container-fluid bg-danger">
+            <div class="row w-100">
                 <div class="col-sm-2 col-md-3">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                     <div class="collapse navbar-collapse h1" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item h6"><a class="nav-link active" aria-current="page" href="#home">Pokemon</a></li>
-                            <li class="nav-item h6"><a class="nav-link" href="#types">Types</a></li>
+                            <li class="nav-item h6"><a id="ir-home" class="nav-link active" aria-current="page" href="#home" onclick="crearTablaPokemons(urlPokemons)">Pokemon</a></li>
+                            <li class="nav-item h6"><a class="nav-link" href="#tipos">Types</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,6 +80,27 @@
                 </div>
 
             </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid" id="tipos">
+        <div class="row">
+            <div class="col align-items-center">
+                <table id="tabla-3" class="table table-responsive">
+                    <thead class="bg-info">
+                        <br>
+                        <tr>
+                            <th>TYPE</th>
+                            <th>Strong Again</th>
+                            <th>Weak Again</th>
+                            <th>Resistant to</th>
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
+
         </div>
 
     </div>

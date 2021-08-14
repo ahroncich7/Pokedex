@@ -50,7 +50,6 @@ function crearTablaTipos() {
                 </tr>`
         document.getElementById("tabla-3").innerHTML += tbody;
         hacerClickeableTipo()
-        hacerLinkeableTipo()
     });
 
 }
