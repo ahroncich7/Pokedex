@@ -1,114 +1,98 @@
 #cuerpo,
 #tipos {
     background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(231, 231, 255, 1) 0%, rgba(123, 231, 252, 1) 100%);
-}
-
-#cuerpo>div {
-    height: 90vh;
-    overflow: hidden;
+    padding-top: 4em;
+    max-height: 100vh;
 }
 
 body {
-    overflow: hidden;
+    font-size: 13px;
 }
 
 #brand {
-    height: 3rem;
+    height: 2.8em;
     position: relative;
-    margin-top: 3rem;
+    margin-top: 3em;
 }
 
 .separador {
     height: 0;
-    padding: 10px;
+    padding-top: 1em;
     position: relative;
-    margin-top: -4rem;
+    margin-top: -4em;
 }
 
 .caja-brand {
-    height: 10rem;
-    border-radius: 5rem 5rem 5rem 5rem;
-    width: 10rem;
+    height: 8.75em;
+    border-radius: 5em 5em 5em 5em;
+    width: 8.75em;
     display: inline-block;
     position: relative;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.527);
     border-style: solid;
-    border-width: 0.5rem;
+    border-width: 0.5em;
     z-index: 100;
 }
 
 .franja-negra {
     border-bottom-style: solid;
-    border-width: 1.5rem;
+    border-width: 1.5em;
+}
+
+.lista-pokemon {
+    background: #ffcd04de;
+    border-radius: 3em;
+    margin-bottom: 0;
+}
+
+.poke:hover {
+    cursor: pointer;
+    transform: scale(1.5, 1.5);
 }
 
 .scrolling {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 75vh;
-    background: #ffcd04de;
-    border-radius: 5rem;
-    width: 20rem;
+    max-width: 10em;
+    text-align: center;
     display: inline-block;
+    max-height: 15vh;
+    padding-top: 0;
+    overflow-y: scroll;
 }
 
-.scrolling>span {
-    background: #ffcd04;
-    width: 75%;
-    display: inline-block;
-    border-radius: 5rem;
-    box-shadow: 0 0 10px rgb(33, 37, 41);
+span {
+    display: block;
+    margin: auto;
+    position: sticky;
+    top: 1em;
 }
 
 #columna-pokemon {
-    height: 75vh;
+    padding: 0;
+    padding-top: 1em;
+}
+
+.card {
+    display: inline-block;
+    background: #a3a3a291;
+    border: #212529;
+    border-width: 0.5em;
+    border-radius: 5em;
+    border-style: solid;
+    overflow-y: hidden;
+    width: 100%;
+    height: 48vh;
 }
 
 #sprite {
-    display: block;
-    height: 150px;
+    height: 30%;
     width: auto;
-}
-
-@media only screen and (max-width: 768px) {
-    .scrolling {
-        height: 20vh;
-        width: 20rem;
-        border-radius: 2rem;
-    }
-     ::-webkit-scrollbar {
-        display: none;
-    }
-    body {
-        overflow: auto;
-    }
-    .caja-brand {
-        position: relative;
-        align-self: center;
-        margin-top: -40px;
-    }
-    #cuerpo>div {
-        overflow: auto;
-    }
-    .card {
-        width: 20rem !important;
-    }
-    .tipos {
-        padding: -4px !important;
-        margin: 0 !important;
-        border-radius: 5px !important;
-        font-size: 8px;
-    }
-    #tabla-3 {
-        margin: 0;
-        text-align: center;
-    }
 }
 
 ::-webkit-scrollbar {
     background: rgb(175, 172, 240);
     border-radius: 2em;
     border: solid 3px transparent;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -125,27 +109,6 @@ body {
 
 ::-webkit-scrollbar-track {
     border: solid 3px transparent;
-}
-
-.scrolling tr:hover {
-    cursor: pointer;
-    transform: scale(1.5, 1.5);
-}
-
-.card {
-    display: inline-block;
-    background: #a3a3a291;
-    border: #212529;
-    border-width: 0.5rem;
-    border-radius: 5em;
-    width: 35rem;
-    border-style: solid;
-    overflow-y: hidden;
-}
-
-.scrolling>span {
-    position: sticky;
-    top: 10px;
 }
 
 .grass {
@@ -222,35 +185,71 @@ body {
 }
 
 .electric {
-    background-color: yellow;
+    background-color: rgb(221, 199, 2);
 }
 
 .tipos {
     border: none !important;
-    color: black !important;
-    padding: 10px 15px !important;
+    color: white !important;
+    padding: 0em 0.5em !important;
     text-align: center !important;
     background-position: bottom !important;
     text-decoration: none !important;
     display: inline-block !important;
     margin: 4px 2px !important;
     cursor: pointer !important;
-    border-radius: 30px !important;
-    box-shadow: 0 0 10px;
+    border-radius: 2em !important;
+    box-shadow: 0 0 10px rgb(43, 42, 42);
+    font-size: 0.75 em;
 }
 
 #tipos {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 90vh;
+    margin: 2vw 0;
 }
 
 #tabla-3 {
     width: 80vw;
-    margin: 5vw auto;
+    margin: 2vw auto;
 }
 
-#tabla-3 thead {
-    position: sticky;
-    top: 7vw;
+#tabla-3 table {
+    border-collapse: collapse;
+    position: relative;
+    margin-top: 0;
+}
+
+#tipos thead {
+    text-align: center;
+    padding: 0;
+}
+
+#tipos td {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    #columna-pokemon {
+        padding-top: 0;
+        max-height: 100vh;
+    }
+    .scrolling {
+        max-height: 60vh;
+        margin: auto;
+    }
+    .card {
+        height: 70vh;
+    }
+    #tipos {
+        height: 100vh;
+    }
+    #sprite {
+        height: 45%;
+        width: auto;
+    }
 }

@@ -25,14 +25,23 @@ function crearTablaPokemons(url) {
 };
 
 function crearTablaTipos() {
-    let tbody;
+    let tbody =
+        ` <thead class="bg-info">
+            <br>
+            <tr>
+                <th>TYPE</th>
+                <th>Strong Against</th>
+                <th>Weak Against</th>
+                <th>No Damage to</th>
+            </tr>
+        </thead>`;
     Types.forEach((type, i) => {
                 let nombre = type.name
                 let pros = type.strengths
                 let contras = type.weaknesses
                 let inmune = type.immunes
 
-                tbody = `<tr>
+                tbody += `<tr>
                     <th>
                         <p class=\"tipos ${nombre.toLowerCase()}\">${nombre}</p>
                     </th>
@@ -48,9 +57,10 @@ function crearTablaTipos() {
                         ${inmune[0] ? `<p class=\"tipos ${inmune[0].toLowerCase()}\">${inmune[0]}</p>` : "-"}
                     </td>
                 </tr>`
-        document.getElementById("tabla-3").innerHTML += tbody;
-        hacerClickeableTipo()
+
     });
+    document.getElementById("tabla-3").innerHTML = tbody;
+    hacerClickeableTipo()
 
 }
 
@@ -58,7 +68,7 @@ function crearTablaTipos() {
 function llamarTipos(url) {
     fetch(url)
         .then(response => response.json())
-        .then(function(pokemon) {
+        .then(function (pokemon) {
             let tbody = "";
             pokemon.pokemon.forEach((element, i) => {
                 tbody += `<tr class=poke><td>${element.pokemon.name}</td></tr>`
@@ -69,7 +79,7 @@ function llamarTipos(url) {
             resetearPokemon();
         })
 
-    .catch(error => console.error("Fallo", error))
+        .catch(error => console.error("Fallo", error))
 };
 
 function hacerClickeablePokemon() {
@@ -96,7 +106,7 @@ function mostrarPokemon(e) {
         .then(responseJSON => {
 
             let name = document.querySelector("#name");
-            name.textContent = responseJSON.name.toUpperCase() ;
+            name.textContent = responseJSON.name.toUpperCase();
 
             let weight = document.querySelector("#weight");
             weight.textContent = responseJSON.weight + " pounds";
@@ -127,7 +137,7 @@ function mostrarPokemon(e) {
 function resetearPokemon() {
     document.querySelector(".scrolling").scrollTop = 0;
     document.querySelector("#sprite").src = urlUnknown
-    document.querySelector("#name").textContent = "--" 
+    document.querySelector("#name").textContent = "--"
     document.querySelector("#weight").textContent = "--"
     document.querySelector("#height").textContent = "--"
     document.querySelector("#abilities").textContent = "--"
