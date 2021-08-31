@@ -204,10 +204,20 @@ span {
 }
 
 #tipos {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 90vh;
     margin: 2vw 0;
+}
+
+#tipos table tbody {
+    display: block;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+#tipos table thead,
+#tipos table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
 }
 
 #tabla-3 {
