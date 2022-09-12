@@ -4,7 +4,10 @@
   "description": "Una pokedex para atraparlos a todos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server -c-1",
+    "test:cypress:dev": "cypress open",
+    "test:cypress": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,13 +20,14 @@
   },
   "homepage": "https://github.com/ahroncich7/Pokedex#readme",
   "dependencies": {
-    "bootstrap": "^5.0.2",
     "jquery": "^3.6.0"
   },
   "devDependencies": {
+    "cypress": "^9.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
-    "http-server": "^13.0.1"
+    "http-server": "^13.0.2",
+    "npm-run-all": "^4.1.5"
   }
 }

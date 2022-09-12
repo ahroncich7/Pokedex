@@ -1,2 +1,2 @@
 # Pokedex
- Una pokedex para atraparlos a todos
+ Una pokedex para atraparlos YA!!!
