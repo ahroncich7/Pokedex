@@ -4,7 +4,7 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable import/extensions */
 
-const urlUnknown = `./images/pikachu.png`;
+const urlUnknown = `https://i.pinimg.com/474x/46/e7/7e/46e77e3db6a6cdce8c63a9de331f31ff.jpg`;
 const urlTypes = 'https://pokeapi.co/api/v2/type/';
 
 export function resetearPokemon() {
